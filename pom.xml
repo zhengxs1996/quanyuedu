@@ -90,16 +90,6 @@
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatisboot.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.feri.ts</groupId>
-                <artifactId>TalentShow_Entity</artifactId>
-                <version>${talentshow.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.feri.ts</groupId>
-                <artifactId>TalentShow_Common</artifactId>
-                <version>${talentshow.version}</version>
-            </dependency>
             <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
             <dependency>
                 <groupId>io.springfox</groupId>
