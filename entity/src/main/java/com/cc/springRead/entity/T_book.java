@@ -47,4 +47,9 @@ public class T_book extends Model<T_book> {
      * 文件路径
      */
     private String textUrl;
+
+    /**
+     * 简介
+     */
+    private String info;
 }
