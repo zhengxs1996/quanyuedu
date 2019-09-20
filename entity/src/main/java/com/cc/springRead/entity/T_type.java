@@ -31,4 +31,14 @@ public class T_type extends Model<T_type> {
      * 类型名称
      */
     private String typeName;
+
+    /**
+     * 类型等级
+     */
+    private Integer level;
+
+    /**
+     * 对应父级分类id
+     */
+    private Integer parentId;
 }
