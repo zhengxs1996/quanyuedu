@@ -12,5 +12,12 @@
     <groupId>com.qfedu</groupId>
     <artifactId>entity</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.1.2</version>
+        </dependency>
+    </dependencies>
 
 </project>
