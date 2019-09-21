@@ -1,0 +1,11 @@
+server:
+  port: 9801
+spring:
+  application:
+    name: TopApi
+eureka:
+  instance:
+    prefer-ip-address: true #以IP地址注册到服务中心
+  client:
+    serviceUrl:
+      defaultZone: http://47.96.230.209:8080/eureka/eureka/

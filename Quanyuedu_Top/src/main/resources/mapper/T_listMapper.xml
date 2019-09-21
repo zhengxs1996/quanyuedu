@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cc.springRead.top.dao.T_listDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.cc.springRead.entity.T_list">
+        <id column="id" property="id" />
+        <result column="bid" property="bid" />
+        <result column="totalLooks" property="totalLooks" />
+        <result column="monthLooks" property="monthLooks" />
+        <result column="weekLooks" property="weekLooks" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, bid, totalLooks, monthLooks, weekLooks
+    </sql>
+
+    <select id="selectTotalTopBooks" resultType="com.cc.springRead.entity.T_book">
+        SELECT
+	        b.*
+        FROM
+	        t_list l
+	        INNER JOIN t_book b ON l.bid = b.id
+        ORDER BY
+	        l.totalLooks DESC
+	        LIMIT 10
+    </select>
+
+    <select id="selectWeekTopBooks" resultType="com.cc.springRead.entity.T_book">
+        SELECT
+	        b.*
+        FROM
+	        t_list l
+	        INNER JOIN t_book b ON l.bid = b.id
+        ORDER BY
+	        l.weekLooks DESC
+	        LIMIT 10
+    </select>
+
+    <select id="selectMonthTopBooks" resultType="com.cc.springRead.entity.T_book">
+        SELECT
+	        b.*
+        FROM
+	        t_list l
+	        INNER JOIN t_book b ON l.bid = b.id
+        ORDER BY
+	        l.monthLooks DESC
+	        LIMIT 10
+    </select>
+
+    <insert id="insert" parameterType="com.cc.springRead.entity.T_list">
+        insert into t_list (bid)
+        VALUES (#{bid})
+    </insert>
+
+    <update id="addLooks" parameterType="int">
+        update t_list set totalLooks=totalLooks+1, weekLooks=weekLooks+1, monthLooks=monthLooks+1
+        where bid=#{bid}
+    </update>
+
+    <update id="clearMonthLooks" parameterType="int">
+        update t_list set weekLooks=0
+    </update>
+
+    <update id="clearWeekLooks" parameterType="int">
+        update t_list set monthLooks=0
+    </update>
+
+</mapper>
