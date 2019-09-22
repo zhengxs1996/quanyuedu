@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
@@ -48,7 +49,17 @@ public class T_user extends Model<T_user> {
     private Integer vip;
 
     /**
-     * 金币
+     * vip开通时间
+     */
+    private Date stopTime;
+
+    /**
+     * vip结束时间
+     */
+    private Date endTime;
+
+    /**
+     * 钱包的Id
      */
     private Integer gold;
 
