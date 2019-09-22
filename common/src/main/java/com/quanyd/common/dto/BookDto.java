@@ -1,31 +1,21 @@
-package com.cc.springRead.entity;
+package com.quanyd.common.dto;
 
-
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Data;
 
-
 /**
- * <p>
- * 书籍表
- * </p>
- *
- * @author cc
- * @since 2019-09-20
+ * @ClassName BookDto
+ * @Description
+ * @Author cc
+ * @Date 2019/9/22 16:50
+ * @Version 1.0
  */
 @Data
-@TableName("t_book")
-public class T_book extends Model<T_book> {
-
+public class BookDto {
     private static final long serialVersionUID = 1L;
 
     /**
      * id
      */
-    @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
     /**
