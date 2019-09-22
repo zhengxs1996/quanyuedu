@@ -1,0 +1,7 @@
+server:
+  port: 8889
+spring:
+  application:
+    name: CollectApi
+  profiles:
+    active: dev  #dev开发环境  test测试环境 prod生产环境(线上环境)

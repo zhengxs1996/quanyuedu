@@ -11,6 +11,8 @@
         <module>Quanyuedu_TopApi</module>
         <module>Quanyuedu_LoginProvider</module>
         <module>Quanyuedu_LoginApi</module>
+        <module>quanyuedu_CollectProvide</module>
+        <module>quanyuedu_collectApi</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
