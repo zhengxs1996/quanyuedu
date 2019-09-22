@@ -7,8 +7,10 @@
     <modules>
         <module>entity</module>
         <module>common</module>
-        <module>springRead_DownloadApi</module>
-        <module>springRead-Download</module>
+        <module>Quanyuedu_Top</module>
+        <module>Quanyuedu_TopApi</module>
+        <module>Quanyuedu_LoginProvider</module>
+        <module>Quanyuedu_LoginApi</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

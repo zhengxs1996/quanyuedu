@@ -1,0 +1,9 @@
+server:
+  port: 9901
+spring:
+  application:
+    name: LoginApi
+  profiles:
+    active: dev
+  main:
+    allow-bean-definition-overriding: true
