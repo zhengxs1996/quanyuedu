@@ -15,8 +15,8 @@
         <module>Quanyuedu_LoginApi</module>
         <module>quanyuedu_CollectProvide</module>
         <module>quanyuedu_collectApi</module>
-        <module>springRead_Download</module>
-        <module>springRead_DownloadApi</module>
+        <module>Quanyuedu_Download</module>
+        <module>Quanyuedu_DownloadApi</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
