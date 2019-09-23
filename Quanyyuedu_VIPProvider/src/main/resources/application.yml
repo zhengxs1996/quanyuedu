@@ -1,0 +1,20 @@
+server:
+  port: 8909
+spring:
+  application:
+    name: VipProvider
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.96.230.209:3306/springRead?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+eureka:
+  instance:
+    prefer-ip-address: true #以IP地址注册到服务中心
+  client:
+    serviceUrl:
+      defaultZone: http://47.96.230.209:8080/eureka/eureka/
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false

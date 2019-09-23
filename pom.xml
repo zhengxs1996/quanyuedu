@@ -7,6 +7,8 @@
     <modules>
         <module>entity</module>
         <module>common</module>
+        <module>Quanyyuedu_VIPProvider</module>
+        <module>Quanyuedu_VIPApi</module>
         <module>Quanyuedu_Top</module>
         <module>Quanyuedu_TopApi</module>
         <module>Quanyuedu_LoginProvider</module>
