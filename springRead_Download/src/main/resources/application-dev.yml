@@ -13,4 +13,6 @@ eureka:
     serviceUrl:
       defaultZone: http://47.96.230.209:8080/eureka/eureka/
 mybatis-plus:
-  mapper-locations: classpath*:/mapper/*.xml;
+  mapper-locations:
+    classpath*: /mapper/*.xml
+  type-aliases-package: com.cc.springRead.entity

@@ -56,7 +56,7 @@ public class BookController {
 
         // 设置OSS的objectName
         book.setObjectName(file.getName());
-        R r = bookService.addBook(book);
+        R<T_book> r = bookService.addBook(book);
         String objectName = r.getMsg();
 
 
@@ -71,7 +71,7 @@ public class BookController {
         URL url = ossClient.generatePresignedUrl(OssConfig.OBJECT_NAME, objectName, date);
 
         // 将url存到数据库
-        T_book book1 = (T_book) r.getData();
+        T_book book1 = r.getData();
         book1.setTextUrl(url.toString());
         bookService.setBookUrl(book1);
 
