@@ -21,7 +21,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.*;
 import java.net.URL;
 import java.util.Date;
-import java.util.UUID;
 
 /**
  * @ClassName BookController
@@ -30,14 +29,14 @@ import java.util.UUID;
  * @Date 2019/9/21 16:56
  * @Version 1.0
  */
-@Api(value = "下载操作", tags = "下载操作")
+@Api(value = "上传下载", tags = "上传下载")
 @RestController
 public class BookController {
     @Autowired
     private BookService bookService;
 
     // 下载书籍
-    @ApiOperation(value = "下载书籍", notes = "下载书籍")
+    @ApiOperation(value = "下载书籍地址", notes = "下载书籍地址")
     @GetMapping("/springRead/download/downloadBook.do")
     public String downloadBook(@RequestParam("id") Integer id){
         return bookService.getDownloadUrl(id).getData();
